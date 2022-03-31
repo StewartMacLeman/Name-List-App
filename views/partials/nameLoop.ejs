@@ -1,0 +1,11 @@
+<% for (const name of namesArray) { %>
+    <p>
+        <span class="firstName"><%= name.f_name %></span>
+        <span class="lastName"><%= name.l_name %></span>
+    </p>
+    <div class="buttonsCont">
+        <div class="hiddenDiv" data-id_value="<%= name._id %>"></div>
+        <button class="deleteName delCol">Delete</button>
+        <button class="editName">Edit</button>
+    </div>
+<% } %>

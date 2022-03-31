@@ -1,0 +1,35 @@
+<main class="main">
+  <h3>Add your names below!</h3>
+
+  <form class="mainForm" action="/" method="POST">
+    <div class="inputContainer">
+      <label for="f_name">First Name:</label>
+      <input type="text" name="f_name" id="f_name" autocomplete="off" />
+    </div>
+    <div class="inputContainer">
+      <label for="l_name">Last Name:</label>
+      <input type="text" name="l_name" id="l_name" autocomplete="off" />
+    </div>
+    <div class="inputContainer">
+      <button type="submit">Submit Name</button>
+    </div>
+  </form>
+  <section class="namesList">
+    <% if (namesArray.length == 0) { %> 
+            <h3>Your list is empty!</h3>
+        <% } else if (namesArray.length == 1) { %> 
+            <h3>You have <%= noOfNames %> name:</h3>
+            <%- include('nameLoop') %> 
+        <% } else if (namesArray.length > 1) { %> 
+           <h3>You have <%= noOfNames %> names:</h3>
+           <%- include('nameLoop') %> 
+        <% } %> 
+  </section>
+  <!-- ///////////////////////////////////////////// -->
+  <div class="modalDiv hiddenDiv"></div>
+  <!-- ///////////////////////////////////////////// -->
+  <%- include('deleteForm') %> 
+  <!-- ///////////////////////////////////////////// -->
+  <%- include('editForm') %> 
+
+</main>

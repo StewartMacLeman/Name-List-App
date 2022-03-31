@@ -1,0 +1,169 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3, p { font-size: 1.75rem; }
+label, input, button { font-size: 1.5rem; }
+
+h1, h2, h3, p, label, input, button {
+    font-family: futura, helvetica, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: .15rem;
+    color: cornflowerblue;
+}
+body {
+    margin: 0 auto;
+}
+/* Button styles ---------------------------------------- */
+button {
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: .3rem;
+    padding: .15rem .3rem;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/* Header styles ---------------------------------------- */
+.header {
+    width: 100%;
+    border-bottom: .25rem solid cornflowerblue;
+    margin-bottom: 1rem;
+}
+/* Main styles ----------------------------------------- */
+.main {
+    width: 95%;
+    margin: 0 auto;
+    border: .25rem solid cornflowerblue;
+    border-radius: .5rem;
+    overflow-y: scroll;
+}
+/* Names Form ---------------- */
+.mainForm {
+    border: .15rem solid red;
+    width: 80%;
+    margin: 1rem auto;
+}
+.inputContainer {
+    margin: .15rem auto;
+}
+.inputContainer label {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+.inputContainer input {
+    display: inline-block;
+    width: 55%;
+    text-align: left;
+    color: black;
+}
+.inputContainer button {
+    display: flex;
+    justify-content: center;
+}
+/* Names list ---------------- */
+.namesList {
+    border: .15rem solid cornflowerblue;
+    width: 80%;
+    margin: 1rem auto; 
+}
+.buttonsCont {
+    display: flex;
+    justify-content: center;
+}
+.buttonsCont button {
+    width: 35%;
+    margin-right: .25rem;
+    margin-left: .25rem;
+}
+.namesList .buttonsCont:last-child {
+    margin-bottom: 1rem;
+}
+.delCol { background-color: red;}
+/* Modal div ------------------------------------------- */
+.modalDiv {
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* Delete Form  ---------------------------------------- */
+.deleteForm, .editForm {
+    width: 60%;
+    height: 50%;
+    background-color: white;
+    border: .25rem solid cornflowerblue;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 2;
+}
+.deleteForm .buttonsCont, .editForm .buttonsCont {
+    width: 100%;
+}
+/* Edit Form  ---------------------------------------- */
+.editForm {
+    width: 80%;
+    flex-direction: column;
+    left: 10%;
+}
+/* Hidden class ---------------------------------------- */
+.hiddenDiv {
+    display: none;
+}
+/* Footer styles ---------------------------------------- */
+.footer {
+    width: 100%;
+    border-top: .25rem solid cornflowerblue;
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+}
+/* Media Queries ---------------------------------------- */
+@media screen and (max-width: 950px){
+    .main { height: 56vh; }
+}
+@media screen and (max-width: 800px){
+    html { font-size: 12px; }
+    .main { height: 65vh; }
+}
+@media screen and (max-width: 400px){
+    html { font-size: 8px; }
+    .deleteForm .buttonsCont, .editForm .buttonsCont {
+        display: flex;
+        flex-direction: column;
+    }
+    .editForm .inputContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .editForm .inputContainer label, .editForm .inputContainer input {
+        width: 80%;
+        text-align: left;
+        font-size: large;
+    }
+    .deleteForm .buttonsCont button, .editForm .buttonsCont button {
+        width: 80%;
+        margin: 1rem auto;
+        padding: 2rem .15rem;
+        font-size: large;
+    }
+}
