@@ -2,7 +2,7 @@
 
 A trivial full-stack CRUD app to make a list of names. 
 
-## Build with:
+## Built with:
 * Express
 * MongoDB
 * EJS
